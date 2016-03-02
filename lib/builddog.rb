@@ -1,6 +1,6 @@
 require_relative "builddog/version"
 require_relative "builddog/trollop"
-require_relative "builddog/operations"
+require_relative "builddog/providers"
 
 module BuildDog
 
@@ -8,6 +8,7 @@ module BuildDog
     puts "#{VERSION}"
   end
 end
+
 
 
 options = Trollop.options do
@@ -39,4 +40,4 @@ fi
 EOF
 #####
 
-BuildDog.operations options
+BuildDog.providers options

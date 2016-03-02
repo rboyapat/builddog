@@ -5,8 +5,9 @@ module Trollop
   class Parser
 
     def builddog_opt 
-      opt :provisioner, "Provisiner: Cloud | Baremetal", :type => :string, :short => :none, :default => 'none'
-      opt :port, "Provisiner port", :type => :int, :short => :none, :default => 443
+      opt :provider, "Server Provider", :type => :string, :short => :none, :default => 'vsphere'
+      opt :controller, "Server Provisioning System Controller", :type => :string, :short => :none, :default => 'none'
+      opt :port, "Controller port", :type => :int, :short => :none, :default => 443
       opt :user, "Username", :type => :string, :short => 'u', :default => 'none'
       opt :password, "Password", :type => :string, :short => 'p', :default => 'none'
       opt :operation, "Operation", :type => :string, :short => 'o', :default => 'none'
