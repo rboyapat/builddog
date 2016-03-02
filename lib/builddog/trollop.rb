@@ -15,14 +15,15 @@ module Trollop
       opt :vm_cpu, "VM No of vCPUs", :type => :int, :short => :none, :default => 1
       opt :vm_memory, "VM Memory in MB", :type => :int, :short => :none, :default => 2048 
       opt :vm_disk, "VM Disk Capacity in KB", :type => :int, :short => :none, :default => 4000000
+      opt :vm_cluster, "VM Build Cluster", :type => :string, :short => :none, :default => "bdg_cluster01"
+      opt :vm_datastore, "VM Build Datastore", :type => :string, :short => :none, :default => "bdg_nasstore01"
+      opt :vm_pg, "VM Build NW PortGroup", :type => :string, :short => :none, :default => "bdg_dvVMNetwork-PG"
       opt :vm_ip, "VM IP", :type => :string, :short => :none, :default => 'none' 
       opt :vm_subnet, "VM Subnet", :type => :string, :short => :none, :default => 'none'
       opt :vm_netmask, "VM Netmask", :type => :string, :short => :none, :default => 'none'
       opt :vm_gw, "VM Gateway", :type => :string, :short => :none, :default => 'none'
       opt :vm_domain, "VM Domain Name", :type => :string, :short => :none, :default => "builddog.com"
       opt :vm_dns_servers, "VM DNS servers", :type => :string, :short => :none, :default => 'none'
-      opt :vm_datastore, "VM Build Datastore", :type => :string, :short => :none, :default => "bdg_nasstore01"
-      opt :vm_pg, "VM Build NW PortGroup", :type => :string, :short => :none, :default => "bdg_dvVMNetwork-PG"
       opt :clone_name, "VM Clone Source Name", :type => :string, :short => :none, :default => "bdg_cln"
       opt :template_name, "VM template Name", :type => :string, :short => :none, :default => "bdg_tmpt"
       opt :datacenter, "VM Datacenter", :type => :string, :short => :none, :default => "bdg"

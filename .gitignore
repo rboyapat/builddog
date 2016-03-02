@@ -12,6 +12,6 @@
 *.o
 *.a
 mkmf.log
-tt/
+tmp/
 *bdg_inventory.yaml*
 *bdg_credentials.yaml*
