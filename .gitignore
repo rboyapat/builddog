@@ -7,9 +7,11 @@
 /pkg/
 /spec/reports/
 /tmp/
-/tt/
 *.bundle
 *.so
 *.o
 *.a
 mkmf.log
+tt/
+*bdg_inventory.yaml*
+*bdg_credentials.yaml*
