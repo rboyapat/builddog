@@ -5,13 +5,13 @@ module RbVmomi
   end
 end
 
+require_relative "vsphere/vm_create"
+require_relative "vsphere/vm_clone"
+
 def vsphere options
 
   options[:host] = options[:controller]
   options[:insecure] = true
-
-  require_relative "vsphere/vm_create"
-  require_relative "vsphere/vm_clone"
 
   case options[:operation]
     when "vm_create"
