@@ -5,12 +5,12 @@ require 'builddog/version'
 
 Gem::Specification.new do |spec|
   spec.name          = "builddog"
-  spec.version       = Builddog::VERSION
+  spec.version       = BuildDog::VERSION
   spec.authors       = ["rboyapat"]
   spec.email         = ["rboyapat@gmail.com"]
-  spec.summary       = %q{TODO: Write a short summary. Required.}
-  spec.description   = %q{TODO: Write a longer description. Optional.}
-  spec.homepage      = ""
+  spec.summary       = %q{ruby library to deploy servers across datacenters}
+  spec.description   = %q{---}
+  spec.homepage      = "http://github.com/rboyapat/builddog"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files -z`.split("\x0")
