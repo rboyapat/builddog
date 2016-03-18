@@ -1,6 +1,6 @@
 # Builddog
 
-ruby library to deploy servers ( baremetal or VM ) across datacenters
+Build tool to deploy servers ( baremetal or VM ) across datacenters
 
 ## Installation
 
@@ -20,13 +20,20 @@ Or install it yourself as:
 
 ## Usage
 
-* using user/password
+### vSphere:
 
-builddog --provider=vsphere --controller=vcenter.localhost --port=443 --user=root --password=password --operation=vm_create --vm-name bdg_testvm1 --vm-cluster=bdg-vmcluster01  --vm-datastore=bdg_nasstore01 --vm-pg=bdg-VMNetwork --datacenter=dbg
+**username/password on command line:**
+```
+builddog --provider=vsphere --ip=vcenter.localhost --user=root --password=password --operation=vm_create --vm-name bdg_testvm1 --vm-cluster=bdg-vmcluster01  --vm-datastore=bdg_datastore01 --vm-pg=bdg-VMNetwork --datacenter=dbg 
+```
 
-* using profile
+**using profile:**
+```
+builddog --provider=vsphere --ip=vcenter.localhost --profile=root --operation=vm_create --vm-name bdg_testvm1 --vm-cluster=bdg-vmcluster01  --vm-datastore=bdg_datastore01 --vm-pg=bdg-VMNetwork --datacenter=dbg
+```
+### AWS:
 
-builddog --provider=vsphere --controller=vcenter.localhost --port=443 --profile=root --operation=vm_create --vm-name bdg_testvm1 --vm-cluster=bdg-vmcluster01  --vm-datastore=bdg_nasstore01 --vm-pg=bdg-VMNetwork --datacenter=dbg
+### Open Stack:
 
 ## Contributing
 

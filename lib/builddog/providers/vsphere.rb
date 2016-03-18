@@ -10,7 +10,9 @@ require_relative "vsphere/vm_clone"
 
 def vsphere options
 
-  options[:host] = options[:controller]
+  options[:user] = options[:vsphere_user]
+  options[:password] = options[:vsphere_password]
+  options[:host] = options[:ip]
   options[:insecure] = true
 
   case options[:operation]
