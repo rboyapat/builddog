@@ -4,13 +4,17 @@ module Trollop
 
   class Parser
 
-    def builddog_opt 
-      opt :provider, "Server Provider", :type => :string, :short => :none, :default => 'vsphere'
-      opt :controller, "Server Provisioning System Controller", :type => :string, :short => :none, :default => 'none'
-      opt :port, "Controller port", :type => :int, :short => :none, :default => 443
+    def server_provider_opt 
+      opt :provider, "Server Provider Type", :type => :string, :short => :none, :default => 'vsphere'
+      opt :controller, "Server Provider IP | Hostname", :type => :string, :short => :none, :default => 'none'
+      opt :port, "Server Provider Port", :type => :int, :short => :none, :default => 443
       opt :user, "Username", :type => :string, :short => 'u', :default => 'none'
       opt :password, "Password", :type => :string, :short => 'p', :default => 'none'
-      opt :operation, "Operation", :type => :string, :short => 'o', :default => 'none'
+      opt :profile, "User Profile", :type => :string, :short => :none, :default => "default"
+      opt :credentials, "Provider Credentials File", :type => :string, :short => :none, :default => "~/.bdg_credentials.yaml"
+    end
+
+    def vsphere_opt
       opt :vm_name, "VM name", :type => :string, :short => :none, :default => "bdg_testvm"
       opt :guest_id, "VM OS type", :type => :string, :short => :none, :default => "rhel6_64Guest"
       opt :vm_cpu, "VM No of vCPUs", :type => :int, :short => :none, :default => 1
@@ -27,10 +31,10 @@ module Trollop
       opt :vm_dns_servers, "VM DNS servers", :type => :string, :short => :none, :default => 'none'
       opt :clone_name, "VM Clone Source Name", :type => :string, :short => :none, :default => "bdg_cln"
       opt :template_name, "VM template Name", :type => :string, :short => :none, :default => "bdg_tmpt"
+      opt :vmlist, "VM Build List File", :type => :string, :short => :none, :default => "./bdg_vmlist"
+      opt :operation, "Operation", :type => :string, :short => 'o', :default => 'none'
       opt :datacenter, "VM Datacenter", :type => :string, :short => :none, :default => "bdg"
       opt :inventory, "Datacenter Inventory File", :type => :string, :short => :none, :default => "~/.bdg_inventory.yaml"
-      opt :credentials, "Provisioner Credentials File", :type => :string, :short => :none, :default => "~/.bdg_credentials.yaml"
-      opt :vmlist, "VM Build List File", :type => :string, :short => :none, :default => "./bdg_vmlist"
     end
 
   end
