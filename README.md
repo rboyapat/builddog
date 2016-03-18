@@ -26,7 +26,7 @@ touch ~/.bdg_credentials.yaml
 chmod 600 ~/.bdg_credentials.yaml
 ```
 *sample credenetials file:*
-
+```
 default:
   vsphere_user: bdgdog 
   vsphere_password: secret99 
@@ -41,7 +41,7 @@ root:
   aws_aws_secret_access_key: xxxxx 
   openstack_access_key_id: xxxxx 
   openstack_secret_access_key: xxxxx 
-
+```
 ### vSphere:
 
 **username/password on command line:**
