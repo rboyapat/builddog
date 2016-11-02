@@ -8,7 +8,7 @@ Gem::Specification.new do |spec|
   spec.version       = BuildDog::VERSION
   spec.authors       = ["rboyapat"]
   spec.email         = ["rboyapat@gmail.com"]
-  spec.summary       = %q{Build tool to deploy servers across datacenters}
+  spec.summary       = %q{Build tool tooooo deploy servers across datacenters}
   spec.description   = %q{---}
   spec.homepage      = "http://github.com/rboyapat/builddog"
   spec.license       = "MIT"
